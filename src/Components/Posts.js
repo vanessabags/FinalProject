@@ -1,6 +1,7 @@
 import React from 'react';
 import { postApi } from '../rest/PostApi';
 import { Post } from './Post';
+import { NewPostForm } from './NewPostForm';
 
 import Container from 'react-bootstrap/Container';
 
@@ -31,7 +32,8 @@ export default class Posts extends React.Component {
     render() {
         return (
 			<Container>
-				<h2>Posts</h2>
+				<h2>Forum</h2>
+                <NewPostForm addPost={this.addPost} />
                 <div>
                     {this.state.posts.map((post) => (
                         <div key={post.id}>

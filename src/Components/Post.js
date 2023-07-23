@@ -1,13 +1,17 @@
 import React from "react";
 import { NewCommentForm } from './NewCommentForm';
 
+import Card from 'react-bootstrap/Card'
+import ListGroup from 'react-bootstrap/ListGroup'
+import Button from 'react-bootstrap/Button'
+
 export const Post = (props) => {
     const { post, updatePost, deletePost } = props;
 
     const deleteComment = (commentId) => {
         const updatedPost = {
             ...post,
-            comments: post.comments.filter((x) => x.id !== commentId)
+            comments: post.comments.filter((x) => x.commentId !== commentId)
         };
         updatePost(updatedPost);
     }
@@ -15,29 +19,33 @@ export const Post = (props) => {
     const AddNewComment = (comment) => updatePost({...post, comments: [...post.comments, comment]});
 
     const comments = () => (
-        <p>
+        <div>
             {post.comments.map((comment, index) => (
                 <div key={index}>
-                    {comment.name}: <br/>
-                    <blockquote>
-                        {comment.commentContent}
-                    </blockquote>
-                    <button onClick={(e) => deleteComment(comment.id)}> Delete </button>
+                    <ListGroup variant="flush">
+                        <ListGroup.Item>
+                            {comment.name}: {comment.commentContent} <Button size="sm" variant="outline-danger" onClick={(e) => deleteComment(comment.commentId)}> Delete </Button>
+                        </ListGroup.Item>
+                    </ListGroup>
                 </div>
             ))}
-        </p>
+        </div>
     )
 
     return (
         <div>
-            <h3>{post.name}</h3>
-            {post.content} <br />
-            {post.createdAt}
-            <button onClick={(e) => deletePost(post.id)}> Delete Post </button>
-            {
-                comments({ comments, postId: post.id, deleteComment })
-            }
-            <NewCommentForm AddNewComment={AddNewComment} />
+            <Card>
+                <Card.Body>
+                    <Card.Header>{post.name}</Card.Header>
+                    <Card.Title>{post.content}</Card.Title>
+                    <Card.Subtitle>{post.createdAt}</Card.Subtitle>
+                    <Button variant="outline-danger" onClick={(e) => deletePost(post.id)}> Delete Post </Button>
+                    {
+                        comments({ comments, postId: post.id, deleteComment })
+                    }
+                    <NewCommentForm AddNewComment={AddNewComment} />
+                </Card.Body>
+            </Card>
         </div>
     )
 }

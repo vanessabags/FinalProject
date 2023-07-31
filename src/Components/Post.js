@@ -1,5 +1,6 @@
 import React from "react";
 import { NewCommentForm } from './NewCommentForm';
+import LikeButton from "./LikeButton";
 
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
@@ -19,12 +20,12 @@ export const Post = (props) => {
     const AddNewComment = (comment) => updatePost({...post, comments: [...post.comments, comment]});
 
     const comments = () => (
-        <div>
+        <div className="commentList">
             {post.comments.map((comment, index) => (
                 <div key={index}>
                     <ListGroup variant="flush">
-                        <ListGroup.Item>
-                            {comment.name}: {comment.commentContent} <Button size="sm" variant="outline-danger" onClick={(e) => deleteComment(comment.commentId)}> Delete </Button>
+                        <ListGroup.Item action variant="info">
+                            {comment.name}: {comment.commentContent} <Button className="btn-right" size="sm" variant="outline-danger" onClick={(e) => deleteComment(comment.commentId)}> Delete </Button>
                         </ListGroup.Item>
                     </ListGroup>
                 </div>
@@ -33,17 +34,20 @@ export const Post = (props) => {
     )
 
     return (
-        <div>
-            <Card>
+        <div className="post-card">
+            <Card  border="info">
                 <Card.Body>
                     <Card.Header>{post.name}</Card.Header>
-                    <Card.Title>{post.content}</Card.Title>
-                    <Card.Subtitle>{post.createdAt}</Card.Subtitle>
-                    <Button variant="outline-danger" onClick={(e) => deletePost(post.id)}> Delete Post </Button>
+                    <div className="post-content">
+                        <Card.Title className="post-content">{post.content}</Card.Title>
+                        <Card.Subtitle>{post.createdAt}</Card.Subtitle>
+                    </div>
+                    <LikeButton />
                     {
                         comments({ comments, postId: post.id, deleteComment })
                     }
                     <NewCommentForm AddNewComment={AddNewComment} />
+                    <Button className="btn-right" variant="outline-danger" size="sm" onClick={(e) => deletePost(post.id)}> Delete Post </Button>
                 </Card.Body>
             </Card>
         </div>

@@ -1,4 +1,7 @@
 import React from 'react';
+import Footer from './Footer';
+import PhotoGallery from './PhotoGallery';
+
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
@@ -14,6 +17,8 @@ export default function Photos() {
                     <Card.Text>Some content. About something. </Card.Text>
                 </Card.Body>
             </Card>
+            <PhotoGallery />
+            <Footer />
         </Container>
         
     )

@@ -1,0 +1,58 @@
+h2 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.newPostForm {
+    border: 1px solid rgb(171, 171, 171);
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 3em;
+}
+.newCommentForm {
+    padding: 10px;
+}
+.post-card {
+    margin-bottom: 1em;
+}
+.post-content {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.btn-right {
+    margin: 5px;
+    float: right;
+}
+.commentList {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+.image-text {
+    font-size: 3em;
+    text-shadow: rgb(95, 95, 95) 4px 5px 5px;
+}
+.image-card {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.card-home {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 1em;
+}
+.spacing {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}

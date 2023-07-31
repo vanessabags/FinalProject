@@ -8,6 +8,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
 
 import Home from './Components/Home.js'
 import Photos from './Components/Photos.js'
@@ -51,14 +52,14 @@ export default function App() {
     <Router>
       {/* This is your Nav element, that users can see. */}
       <div>
-        <NavBar collapseOnSelect expand="lg" bg='dark' data-bs-theme='dark'>
+        <NavBar sticky="top" collapseOnSelect expand="lg" bg='dark' data-bs-theme='dark'>
           <NavBar.Brand  style={{ padding: "15px"}}> Blogging</NavBar.Brand>
           <NavBar.Toggle aria-controls='responsive-navbar-nav' />
           <NavBar.Collapse id='responsive-navbar-nav'>
             <Nav className='me-auto'>
               <Nav.Link href='/'>Home</Nav.Link>
               <Nav.Link href='/photos'>Photos</Nav.Link>
-              <Nav.Link href='/posts'>Posts</Nav.Link>
+              <Nav.Link href='/posts'>News Post</Nav.Link>
             </Nav>
           </NavBar.Collapse>
         </NavBar>

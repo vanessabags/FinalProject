@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Alert } from 'react-bootstrap';
 
 export const NewPostForm = (props) => {
     const [name, setName] = useState("");
@@ -15,8 +15,8 @@ export const NewPostForm = (props) => {
     }
 
     return (
-        <div>
-            <h3> Start Posting! </h3>
+        <div className='newPostForm'>
+            <h3> Share Ways to Help Your Community & How to Others Can Too! </h3>
             <Form onSubmit={onSubmit}>
                 <Form.Group>
                     <Form.Control
@@ -31,7 +31,7 @@ export const NewPostForm = (props) => {
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                     />
-                    <Button type='submit' onClick={() => setCurrentDateTime(new Date())}>Add Post!</Button>
+                    <Button variant='info' type='submit' className='btn-right' onClick={() => setCurrentDateTime(new Date())}>Add Post!</Button>
                 </Form.Group>
             </Form>
         </div>

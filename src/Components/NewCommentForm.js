@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Button, Form, Card } from 'react-bootstrap';
+import { Button, Form, Card, Row, Col } from 'react-bootstrap';
 
 export const NewCommentForm = (props) => {
     const [name, setName] = useState("");
@@ -20,24 +20,34 @@ export const NewCommentForm = (props) => {
 
     return (
         <div>
-            <Card>
-                <Card.Header>Add Comment</Card.Header>
+            <Card className='newCommentForm' border='info'> 
                 <Form onSubmit={onSubmit}>
                     <Form.Group>
-                        <Form.Control 
-                            type='text' 
-                            placeholder='Name' 
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                        <Form.Control 
-                            as="textarea" 
-                            rows={2} 
-                            size='sm'
-                            value={commentContent}
-                            onChange={(e) => setCommentContent(e.target.value)}
-                        />
-                        <Button variant='outline-primary' type='submit' onClick={(e) => setCommentId(commentId+1)}> Comment! </Button>
+                        <Row>
+                            <Col xs={1}>
+                                Add Comment
+                            </Col>
+                            <Col xs={2}>
+                                <Form.Control 
+                                type='text' 
+                                placeholder='Name' 
+                                value={name}
+                                size='sm'
+
+                                onChange={(e) => setName(e.target.value)}
+                                />
+                            </Col>
+                            <Col>
+                                <Form.Control 
+                                    as="textarea" 
+                                    rows={2} 
+                                    size='sm'
+                                    value={commentContent}
+                                    onChange={(e) => setCommentContent(e.target.value)}
+                                />
+                            </Col>
+                        </Row>
+                        <Button className='btn-right' variant='info' size='sm' type='submit' onClick={(e) => setCommentId(commentId+1)}> Comment! </Button>
                     </Form.Group>
                 </Form>
             </Card>

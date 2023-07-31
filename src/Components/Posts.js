@@ -3,6 +3,9 @@ import { postApi } from '../rest/PostApi';
 import { Post } from './Post';
 import { NewPostForm } from './NewPostForm';
 
+import Footer from './Footer';
+import Article from './Article';
+
 import Container from 'react-bootstrap/Container';
 
 export default class Posts extends React.Component {
@@ -32,7 +35,8 @@ export default class Posts extends React.Component {
     render() {
         return (
 			<Container>
-				<h2>Forum</h2>
+				<h2>Connecting with your Community</h2>
+                <Article />
                 <NewPostForm addPost={this.addPost} />
                 <div>
                     {this.state.posts.map((post) => (
@@ -46,6 +50,7 @@ export default class Posts extends React.Component {
                         </div>
                     ))}
                 </div>
+                <Footer />
 			</Container>
 			
 		)

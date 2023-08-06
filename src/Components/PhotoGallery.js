@@ -1,5 +1,6 @@
 import React from 'react';
 import { photoApi } from '../rest/PhotoApi';
+import LikeButton from './LikeButton';
 
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
@@ -23,9 +24,10 @@ export default class PhotoGallery extends React.Component {
                         <div key={photo.id}>
                             <Card style={{ width: '18rem', padding: "1em", margin: "1em"}}>
                                 <Card.Img variant='top' src={photo.url} />
-                                <Card.Text>
-                                    <Card.Subtitle>{photo.title}</Card.Subtitle>
+                                <Card.Text style={{ display: "flex", justifyContent: "center", alignItems: "center", padding: "5px"}}>
+                                    {photo.title}
                                 </Card.Text>
+                                <LikeButton />
                             </Card>
                         </div>
                     ))}

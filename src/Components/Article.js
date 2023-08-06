@@ -22,7 +22,7 @@ const Article = () => {
                     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </Col>
             <Col sm={3}>
-                <Accordion>
+                <Accordion flush className='accordian-space'>
                     <Accordion.Item eventKey='0'>
                         <Accordion.Header>The Beginning</Accordion.Header>
                         <Accordion.Body> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

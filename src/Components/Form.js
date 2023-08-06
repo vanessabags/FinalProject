@@ -18,10 +18,10 @@ export default function InformationForm() {
     }
 
     return (
-        <div onSubmit={handleSubmit}>
+        <div>
             <FloatingLabel
                 controlId="floatingInputName"
-                label="name"
+                label="Name"
                 className="mb-3"
                 >
                 <Form.Control 
@@ -44,7 +44,9 @@ export default function InformationForm() {
                     style={{ height: '100px' }}
                 />
             </FloatingLabel>
-            <Button variant='outline-info' type='submit' size='sm'>Submit</Button>
+            <div className='d-grid p-2'>
+                <Button variant='outline-info' type='submit' size='sm' onClick={handleSubmit}>Submit</Button>
+            </div>
         </div>
     );
 }

@@ -11,7 +11,7 @@ const LikeButton = () => {
 
     return (
         <button className='like-button' onClick={ handleClick }>
-            <span className='likes-counter'>{`♥ ` }<Badge bg='primary'>{likes}</Badge></span>
+            <span className='likes-counter'>{`♥ ` }<Badge bg='info'>{likes}</Badge></span>
         </button>
     )
 }

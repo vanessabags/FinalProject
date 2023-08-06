@@ -23,9 +23,9 @@ export default function HomeCards () {
                     <Card.Title style={{ textAlign: "center"}}>Creator</Card.Title>
                     <Card.Text>
                         This is a card with a picture of me. Some details are not given and never will be.
-                        I will eat sugar forever. Sometimes I will stop, but I will start again.
+                        I will eat sugar forever. Sometimes I will stop, but I will start.
                     </Card.Text>
-                    <Button variant="secondary">More Details..</Button>
+                    <Button variant="outline-dark">More Details..</Button>
                 </Card>
             </Col>
             <Col sm>
@@ -41,9 +41,9 @@ export default function HomeCards () {
                     </Card.Img>
                     <Card.Title style={{ textAlign: "center"}}>Editor</Card.Title>
                     <Card.Text>
-                        Text Text Text me.
+                    I will eat sugar forever. Sometimes I will stop, but I will start again. What is sugar made of - besides joy?
                     </Card.Text>
-                    <Button variant="secondary">More Details..</Button>
+                    <Button variant="outline-dark">More Details..</Button>
                 </Card>
             </Col>
             <Col sm>
@@ -61,7 +61,7 @@ export default function HomeCards () {
                     <Card.Text>
                         Sports, sports, and sports. Something about sweating on people gets you going
                     </Card.Text>
-                    <Button variant="secondary">More Details..</Button>
+                    <Button variant="outline-dark">More Details..</Button>
                 </Card>
             </Col>
         </Row>

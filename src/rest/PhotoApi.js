@@ -5,6 +5,7 @@ class PhotoApi {
         try {
             const resp = await fetch(PHOTO_ENDPOINT);
             const data = await resp.json();
+            console.log(data);
             return data;
         } catch (e) {
             console.log("fetch ain't fetching!");

@@ -11,15 +11,16 @@ export default function Home() {
 	
 		return (
 			<Container>
-				<h2>Home</h2>
 				<HomeCarousel />
 				<hr />
 				<HomeCards />
 				<hr />
 				<Article />
 				<hr />
-				<h4>For more information, Sign Up for Our Newsletter!</h4>
-				<Form />
+				<div className='form-container'>
+					<h4>For More Information, Sign Up for Our Newsletter!</h4>
+					<Form />
+				</div>
 				<Footer />
 			</Container>
 			

@@ -53,7 +53,7 @@ export default function App() {
       {/* This is your Nav element, that users can see. */}
       <div>
         <NavBar sticky="top" collapseOnSelect expand="lg" bg='dark' data-bs-theme='dark'>
-          <NavBar.Brand  style={{ padding: "15px"}}> Blogging</NavBar.Brand>
+          <NavBar.Brand  style={{ padding: "15px"}}> Connection </NavBar.Brand>
           <NavBar.Toggle aria-controls='responsive-navbar-nav' />
           <NavBar.Collapse id='responsive-navbar-nav'>
             <Nav className='me-auto'>

@@ -35,7 +35,7 @@ export default class Posts extends React.Component {
     render() {
         return (
 			<Container>
-				<h2>Connecting with your Community</h2>
+                <h2 className='myheading'>Community</h2>
                 <Article />
                 <NewPostForm addPost={this.addPost} />
                 <div>

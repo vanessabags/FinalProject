@@ -3,8 +3,8 @@ import { NewCommentForm } from './NewCommentForm';
 import LikeButton from "./LikeButton";
 
 import Card from 'react-bootstrap/Card'
-import ListGroup from 'react-bootstrap/ListGroup'
 import Button from 'react-bootstrap/Button'
+import { Badge } from "react-bootstrap";
 
 export const Post = (props) => {
     const { post, updatePost, deletePost } = props;
@@ -20,14 +20,13 @@ export const Post = (props) => {
     const AddNewComment = (comment) => updatePost({...post, comments: [...post.comments, comment]});
 
     const comments = () => (
-        <div className="commentList">
+        <div>
             {post.comments.map((comment, index) => (
-                <div key={index}>
-                    <ListGroup variant="flush">
-                        <ListGroup.Item action variant="info">
-                            {comment.name}: {comment.commentContent} <Button className="btn-right" size="sm" variant="outline-danger" onClick={(e) => deleteComment(comment.commentId)}> Delete </Button>
-                        </ListGroup.Item>
-                    </ListGroup>
+                <div key={index} className="comments">
+                    <Badge bg="info" text="dark" gap={2}>
+                        {comment.name}: {comment.commentContent} 
+                        <Button className="btn-right" size="sm" variant="outline-danger" onClick={(e) => deleteComment(comment.commentId)}> Delete </Button>
+                    </Badge>
                 </div>
             ))}
         </div>

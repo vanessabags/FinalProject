@@ -10,8 +10,8 @@ function HomeCarousel() {
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3 className='image-text'>Family</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3 className='image-text'>Home</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -22,8 +22,8 @@ function HomeCarousel() {
             />
 
             <Carousel.Caption>
-              <h3 className='image-text'>Environment</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3 className='image-text'>Home</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -34,7 +34,7 @@ function HomeCarousel() {
             />
 
             <Carousel.Caption>
-              <h3 className='image-text'>Community</h3>
+              <h3 className='image-text'>Home</h3>
               <p>
                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
               </p>
@@ -48,7 +48,7 @@ function HomeCarousel() {
             />
 
             <Carousel.Caption>
-              <h3 className='image-text'>People</h3>
+              <h3 className='image-text'>Home</h3>
               <p>
                 Praesent commodo cursus magna, vel scelerisque nisl consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur.
               </p>
